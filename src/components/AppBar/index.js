@@ -10,10 +10,7 @@ import { Menu, Adicionar, Logout, Ajuda, Perfil } from '../../resources/icons'
 import { Link } from 'react-router'
 const AppBar = ({
   onClickToggleMenu,
-  onClickPerfilLink,
-  onClickNovoProjetoLink,
-  onClickAjudaLink,
-  onClickSairLink
+  onClickNewPatrolman
 }) => (
   <MUIAppBar
     titleStyle={{
@@ -31,9 +28,9 @@ const AppBar = ({
         anchorOrigin={{horizontal: 'right', vertical: 'top'}}
       >
         {/* <MenuItem leftIcon={<Perfil />} primaryText="Perfil" onClick={onClickPerfilLink} />
-        <Divider />
-        <MenuItem leftIcon={<Adicionar />} primaryText="Novo projeto" onClick={onClickNovoProjetoLink} />
-        <MenuItem leftIcon={<Ajuda />} primaryText="Ajuda" onClick={onClickAjudaLink} />
+        <Divider /> */}
+        <MenuItem leftIcon={<Adicionar />} primaryText="New Patrolman" onClick={onClickNewPatrolman} />
+        {/* <MenuItem leftIcon={<Ajuda />} primaryText="Ajuda" onClick={onClickAjudaLink} />
         <MenuItem leftIcon={<Logout />} primaryText="Sair" onClick={onClickSairLink} /> */}
       </IconMenu>
     }

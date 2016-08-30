@@ -4,7 +4,6 @@ import LoginForm from '../../components/LoginForm'
 import { push } from 'react-router-redux';
 
 const mapStateToProps = (state) => {
-  console.log(state.login.get('error'))
   return {
     email: state.login.get('email'),
     password: state.login.get('password'),

@@ -1,17 +1,20 @@
-import { Map } from 'immutable'
+import Immutable, { Map } from 'immutable'
 const INSERT = 'ddp/collections/INSERT';
 const REMOVE = 'ddp/collections/REMOVE';
 const UPDATE = 'ddp/collections/UPDATE';
 import { setConnectionState } from './connection'
 
-const initialState = Map();
+const initialState = Map({
+  bots: Map(),
+  encounters: Map()
+});
 
 export default (state = initialState, { type, payload = {}}) => {
   const {id, collection, doc, fields} = payload;
 
   switch (type) {
     case INSERT:
-      return state.setIn([collection, id], Map({...doc, _id: id}));
+      return state.setIn([collection, id], Immutable.fromJS({...doc, _id: id}));
     break;
     case REMOVE:
       return state.deleteIn([collection, id])

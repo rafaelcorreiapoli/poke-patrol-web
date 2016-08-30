@@ -10,10 +10,7 @@ const App = ({
   onClickComunidadeLink,
   onClickMuralLink,
   onChangeDrawerState,
-  onClickPerfilLink,
-  onClickNovoProjetoLink,
-  onClickAjudaLink,
-  onClickSairLink,
+  onClickNewPatrolman,
   drawerOpen,
   children
 }) => {
@@ -29,10 +26,7 @@ const App = ({
         />
         <AppBar
           onClickToggleMenu={() => onChangeDrawerState(true)}
-          onClickPerfilLink={onClickPerfilLink}
-          onClickNovoProjetoLink={onClickNovoProjetoLink}
-          onClickAjudaLink={onClickAjudaLink}
-          onClickSairLink={onClickSairLink}
+          onClickNewPatrolman={onClickNewPatrolman}
         />
         <div>
           {children}

@@ -102,7 +102,7 @@ export const setupHandler = (componentId, publication, params) => {
         dispatch(setHandlerReady(handler.id))
       })
     } else {
-      const hostComponent = state.ddp.subscriptions.get(componentId)
+      const hostComponent = state.ddp.components.get(componentId)
       const alreadyRegistered = hostComponent.find(handlerId => handlerId === handler.id)
       if (!alreadyRegistered) {
         dispatch(increaseHandlerCounter(handler.id))
